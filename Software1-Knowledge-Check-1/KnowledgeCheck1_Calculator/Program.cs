@@ -8,18 +8,12 @@ var calculator = new Calculator();
 switch (input)
 {
     case "1":
-        Console.WriteLine("Enter 2 integers to add");
-        var addNumber1 = Console.ReadLine();
-        var addNumber2 = Console.ReadLine();
+        var success = ErrorMessage.UserNumbers("add", out int num1, out int num2);
 
-        if (int.TryParse(addNumber1, out int addNumOne) && int.TryParse(addNumber2, out int addNumTwo))
+        if (success == true)
         {
-            Console.Write($"{addNumber1} + {addNumber2} = ");
-            Console.Write(calculator.Add(addNumOne, addNumTwo));
-        }
-        else
-        {
-            ErrorMessage.PrintError();
+            Console.Write($"{num1} + {num2} = ");
+            Console.Write(calculator.Add(num1, num2));        
         }
         break;
 
@@ -69,7 +63,6 @@ switch (input)
         {
             ErrorMessage.PrintError();
         }
-        break;
         break;
 
     default:
