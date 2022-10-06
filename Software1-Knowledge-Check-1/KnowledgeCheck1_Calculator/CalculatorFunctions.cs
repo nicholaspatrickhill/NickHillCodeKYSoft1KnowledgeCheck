@@ -10,11 +10,11 @@ namespace KnowledgeCheck1_Calculator
     {
         public static void PrintError()
         {
-            Console.WriteLine("One or more of the numbers is not an int");
+            Console.WriteLine("One or more of the numbers is not an int.");
         }
         public static bool UserNumbers(string CalcFunction, out int num1, out int num2)
         {
-            Console.WriteLine("Enter 2 integers to" + CalcFunction);
+            Console.WriteLine("Enter 2 integers to " + CalcFunction +".");
             var number1 = Console.ReadLine();
             var number2 = Console.ReadLine();
 
@@ -23,7 +23,6 @@ namespace KnowledgeCheck1_Calculator
                 num1 = num1Temp;
                 num2 = num2Temp;
                 return true;
-
             }
             else
             {
